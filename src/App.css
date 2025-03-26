@@ -1,0 +1,33 @@
+.home-section {
+  min-height: 100vh;              /* Full viewport height */
+  width: 100vw;                   /* Full viewport width */
+  background-image: url('./assets/IMG_0289.jpg');  /* Path relative to src */
+  background-size: cover;         /* Makes image cover the section */
+  background-position: center;    /* Centers the image */
+  background-repeat: no-repeat;   /* Prevents tiling */
+  margin: 0;                     /* Removes margins */
+  padding: 0;                    /* Removes padding */
+}
+
+section {
+  min-height: 100vh;
+}
+
+.card {
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+footer {
+  min-height: auto;
+}
+.navbar {
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  
+}

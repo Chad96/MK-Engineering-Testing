@@ -1,0 +1,122 @@
+/* WhyUs.css */
+#why-us {
+  padding: 80px 0;
+  background-color: #f8f9fa; /* Light gray background, matches About */
+}
+
+#why-us .container {
+  max-width: 1200px;
+}
+
+#why-us h2 {
+  font-size: 2.5rem;
+  color: #800000; /* Maroon */
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#why-us .why-us-item {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#why-us .why-us-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#why-us .why-us-item h4 {
+  font-size: 1.5rem;
+  color: #800000; /* Maroon */
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#why-us .why-us-item p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* New styles for the image */
+.why-us-image {
+  text-align: center; /* Center the image */
+}
+
+.why-us-image img {
+  max-width: 100%; /* Ensure it fits the container */
+  height: auto;
+  border-radius: 10px; /* Optional: match card styling */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional: match card shadow */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) { /* Tablets and smaller, below md breakpoint */
+  #why-us {
+    padding: 50px 0;
+  }
+
+  #why-us h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  #why-us .why-us-item {
+    padding: 15px;
+  }
+
+  #why-us .why-us-item h4 {
+    font-size: 1.3rem;
+  }
+
+  #why-us .why-us-item p {
+    font-size: 1rem;
+  }
+
+  .why-us-image img {
+    max-width: 80%; /* Slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 767px) { /* Below md, when columns stack */
+  #why-us .why-us-item {
+    margin-bottom: 20px; /* Consistent spacing when stacked */
+  }
+
+  .why-us-image {
+    margin-top: 30px; /* Adjust spacing above image */
+  }
+}
+
+@media (max-width: 576px) { /* Mobile phones */
+  #why-us {
+    padding: 30px 0;
+  }
+
+  #why-us h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  #why-us .why-us-item {
+    padding: 12px;
+  }
+
+  #why-us .why-us-item h4 {
+    font-size: 1.2rem;
+  }
+
+  #why-us .why-us-item p {
+    font-size: 0.95rem;
+  }
+
+  .why-us-image img {
+    max-width: 90%; /* Adjust for smaller screens */
+    
+  }
+}

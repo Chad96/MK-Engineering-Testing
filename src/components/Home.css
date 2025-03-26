@@ -1,0 +1,98 @@
+/* Home.css */
+#home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../assets/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 0;
+  }
+  
+  #home h1.display-4 {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 20px;
+  }
+  
+  #home p.lead {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+  }
+  
+  #home p.mb-4 {
+    color: #fff;
+    font-size: 1.75rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+  }
+  
+  #home .home-button {
+    background-color: #800000;
+    border-color: #800000;
+    color: #fff;
+    font-size: 1.25rem;
+    padding: 12px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  #home .home-button:hover {
+    background-color: #660000; /* Darker maroon on hover */
+    border-color: #660000;
+    transform: scale(1.05); /* Slight scale-up */
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) { /* Tablets and smaller */
+    #home {
+      padding: 30px 0;
+    }
+  
+    #home h1.display-4 {
+      font-size: 3.5rem; /* Smaller heading */
+    }
+  
+    #home p.lead {
+      font-size: 1.5rem;
+    }
+  
+    #home p.mb-4 {
+      font-size: 1.25rem;
+      margin-bottom: 25px;
+    }
+  
+    #home .home-button {
+      font-size: 1.1rem;
+      padding: 10px 25px;
+    }
+  }
+  
+  @media (max-width: 576px) { /* Mobile phones */
+    #home {
+      padding: 20px 0;
+    }
+  
+    #home h1.display-4 {
+      font-size: 2.5rem; /* Even smaller heading */
+    }
+  
+    #home p.lead {
+      font-size: 1.2rem;
+    }
+  
+    #home p.mb-4 {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+  
+    #home .home-button {
+      font-size: 1rem;
+      padding: 8px 20px;
+    }
+  }
