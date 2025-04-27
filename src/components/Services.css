@@ -92,13 +92,14 @@
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
+
 #services .combined-section.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 #services .combined-section-content {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.1);
   padding: 30px;
   border-radius: 10px;
   backdrop-filter: blur(5px);
@@ -135,6 +136,26 @@
 
 #services .combined-section img:hover {
   transform: scale(1.05);
+}
+.combined-section-content {
+  background-color: #f0f4f8; /* Light background just for text */
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Optional: better text styling */
+.combined-section-content h2 {
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.combined-section-content p {
+  color: #333333;
+  line-height: 1.6;
 }
 
 /* Responsive Adjustments */

@@ -13,22 +13,25 @@ function Services() {
       title: "Engineering Consulting",
       image: ConsultingImg,
       items: [
+        "Mechanical parts/equipment design",
+        "Waste water & water treatment plants design",
         "Technical advisory and feasibility studies",
         "System design and optimization",
-        "Mechanical parts/equipment",
-        "Waste water & water treatment plants design",
         "Process improvement and troubleshooting",
+        
+        
+        
       ],
     },
     {
       title: "Product Supply",
       image: SupplyImg,
       items: [
+        "Pumps & Spares(self-priming pumps, high-pressure centrifugal pumps, etc..)",
         "Sourcing high-quality engineering components and materials",
         "Supply chain management and logistics solutions",
         "Vendor evaluation and procurement consulting",
-        "Pumps (self-priming pumps, high-pressure centrifugal pumps, etc..)",
-        "Pumps spares",
+        
       ],
     },
     {
