@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import OptImage from "../assets/why.jpg"; // Import the image
+import OptImage from "../assets/big-pic.jpg"; // Import the image
 import "./WhyUs.css"; // Import the CSS
 
 function WhyUs() {

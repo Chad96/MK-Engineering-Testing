@@ -1,232 +1,249 @@
 /* Services.css */
+
 #services {
-    padding: 80px 0;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/serv.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    margin: 0;
+  padding: 80px 0;
+  background-color: #550000; /* Maroon color */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+}
+
+#services .container {
+  max-width: 1200px;
+}
+
+#services h2 {
+  margin-top: 5%;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+#services p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+#services .card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#services .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#services .card-img-top {
+  height: 250px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#services .card-body {
+  padding: 20px;
+}
+
+#services .card-title {
+  font-size: 1.5rem;
+  color: #800000;
+  margin-bottom: 15px;
+}
+
+#services .card ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+#services .card li {
+  margin-bottom: 10px;
+}
+
+#services .card li::before {
+  content: "•";
+  color: #800000;
+  margin-right: 8px;
+}
+
+/* Combined Section Styling */
+#services .combined-section {
+  background-color: #550000;
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  align-items: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#services .combined-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#services .combined-section-content {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+#services .optimization-section h2,
+#services .team-section h2 {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px;
+}
+
+#services .optimization-section p,
+#services .team-section p {
+  color: #fff;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  text-align: left;
+  margin-bottom: 30px;
+  padding: 0 10px;
+}
+
+#services .combined-section img {
+  max-height: 500px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+#services .combined-section img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  #services {
+    padding: 50px 0;
   }
-  
-  #services .container {
-    max-width: 1200px;
-  }
-  
+
   #services h2 {
-    margin-top: -20px;
-    margin-bottom: 40px;
-    color: #fff;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    margin-top: 5%;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 30px;
   }
-  
+
   #services p {
-    color: #fff;
-    font-size: 1.2rem;
-    margin-bottom: 50px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 40px;
   }
-  
-  #services .card {
-    border: none;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
-    border-radius: 10px;
-  }
-  
-  #services .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
+
   #services .card-img-top {
-    height: 250px;
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    height: 200px;
   }
-  
+
+  #services .card-title {
+    font-size: 1.3rem;
+  }
+
+  #services .card ul {
+    font-size: 0.95rem;
+  }
+
   #services .card-body {
+    padding: 15px;
+  }
+
+  /* Combined Section */
+  #services .combined-section {
     padding: 20px;
   }
-  
-  #services .card-title {
-    font-size: 1.5rem;
-    color: #800000;
-    margin-bottom: 15px;
-  }
-  
-  #services .card ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  #services .card li {
-    margin-bottom: 10px;
-  }
-  
-  #services .card li::before {
-    content: "•";
-    color: #800000;
-    margin-right: 8px;
-  }
-  
-  /* Combined Section Styling */
-  #services .combined-section {
-    background-color: rgba(255, 255, 255, 0.1); /* Light overlay for contrast */
-    padding: 30px;
-    border-radius: 10px;
-    align-items: center; /* Vertically center content with image */
-  }
-  
+
   #services .optimization-section h2,
   #services .team-section h2 {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    margin-bottom: 15px;
+    font-size: 1.8rem;
+    text-align: center;
   }
-  
+
   #services .optimization-section p,
   #services .team-section p {
-    color: #fff;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    margin-bottom: 53px; /* Remove extra bottom margin */
+    font-size: 1rem;
+    text-align: center;
   }
-  
+
   #services .combined-section img {
-    max-height: 500px; /* Taller to accommodate both text blocks */
-    object-fit: cover;
-    width: 100%;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    max-height: 400px;
+    margin-top: 20px;
   }
-  
-  #services .combined-section img:hover {
-    transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  #services {
+    padding: 30px 0;
   }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) { /* Tablets and smaller */
-    #services {
-      padding: 50px 0;
-    }
-  
-    #services h2 {
-      font-size: 2rem;
-      margin-top: 0;
-      margin-bottom: 30px;
-    }
-  
-    #services p {
-      font-size: 1rem;
-      margin-bottom: 40px;
-    }
-  
-    #services .card-img-top {
-      height: 200px;
-    }
-  
-    #services .card-title {
-      font-size: 1.3rem;
-    }
-  
-    #services .card ul {
-      font-size: 0.95rem;
-    }
-  
-    #services .card-body {
-      padding: 15px;
-    }
-  
-    /* Combined Section */
-    #services .combined-section {
-      padding: 20px;
-    }
-  
-    #services .optimization-section h2,
-    #services .team-section h2 {
-      font-size: 1.8rem;
-      text-align: center;
-    }
-  
-    #services .optimization-section p,
-    #services .team-section p {
-      font-size: 1rem;
-      text-align: center;
-    }
-  
-    #services .combined-section img {
-      max-height: 400px; /* Adjust for stacked layout */
-      margin-top: 20px;
-    }
+
+  #services h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
   }
-  
-  @media (max-width: 576px) { /* Mobile phones */
-    #services {
-      padding: 30px 0;
-    }
-  
-    #services h2 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
-    }
-  
-    #services p {
-      font-size: 0.9rem;
-      margin-bottom: 30px;
-    }
-  
-    #services .card {
-      margin-bottom: 20px;
-    }
-  
-    #services .card-img-top {
-      height: 180px;
-    }
-  
-    #services .card-title {
-      font-size: 1.2rem;
-    }
-  
-    #services .card ul {
-      font-size: 0.9rem;
-    }
-  
-    #services .card-body {
-      padding: 12px;
-    }
-  
-    /* Combined Section */
-    #services .combined-section {
-      padding: 15px;
-    }
-  
-    #services .optimization-section h2,
-    #services .team-section h2 {
-      font-size: 1.6rem;
-    }
-  
-    #services .optimization-section p,
-    #services .team-section p {
-      font-size: 0.95rem;
-    }
-  
-    #services .combined-section img {
-      max-height: 300px;
-    }
+
+  #services p {
+    font-size: 0.9rem;
+    margin-bottom: 30px;
   }
+
+  #services .card {
+    margin-bottom: 20px;
+  }
+
+  #services .card-img-top {
+    height: 180px;
+  }
+
+  #services .card-title {
+    font-size: 1.2rem;
+  }
+
+  #services .card ul {
+    font-size: 0.9rem;
+  }
+
+  #services .card-body {
+    padding: 12px;
+  }
+
+  /* Combined Section */
+  #services .combined-section {
+    padding: 15px;
+  }
+
+  #services .optimization-section h2,
+  #services .team-section h2 {
+    font-size: 1.6rem;
+  }
+
+  #services .optimization-section p,
+  #services .team-section p {
+    font-size: 0.95rem;
+  }
+
+  #services .combined-section img {
+    max-height: 300px;
+  }
+}

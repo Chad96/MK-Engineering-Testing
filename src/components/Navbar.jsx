@@ -1,29 +1,43 @@
 import React, { useState } from "react";
 import { Nav, Navbar as BootstrapNavbar } from "react-bootstrap";
 import { Link } from "react-scroll";
-import "./Navbar.css"; // Import the CSS
+import "./Navbar.css"; 
+import logo from "../assets/logo-final.png";
 
 function Navbar() {
-  const [expanded, setExpanded] = useState(false); // State to track collapse
+  const [expanded, setExpanded] = useState(false);
 
-  // Function to handle link clicks and close the collapse
   const handleNavClick = () => {
-    setExpanded(false); // Close the collapse
+    setExpanded(false);
   };
 
   return (
     <BootstrapNavbar
-      bg="dark"
-      variant="dark"
       expand="lg"
       fixed="top"
-      expanded={expanded} // Control collapse state
-      onToggle={(isOpen) => setExpanded(isOpen)} // Update state when toggled
+      expanded={expanded}
+      onToggle={(isOpen) => setExpanded(isOpen)}
+      style={{ backgroundColor: "#550000" }} // Dark maroon background
     >
-      <BootstrapNavbar.Brand as={Link} to="home" smooth={true} duration={500} onClick={handleNavClick}>
-        MK Engineering
+      <BootstrapNavbar.Brand
+        as={Link}
+        to="home"
+        smooth={true}
+        duration={500}
+        onClick={handleNavClick}
+        className="d-flex align-items-center justify-content-center text-white"
+      >
+        <img
+          src={logo}
+          alt="MK Engineering Logo"
+          style={{ width: "80px", height: "60px" }}
+        />
       </BootstrapNavbar.Brand>
-      <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav" />
+
+      <BootstrapNavbar.Toggle
+        aria-controls="basic-navbar-nav"
+        style={{ borderColor: "rgba(255, 255, 255, 0.5)" }}
+      />
       <BootstrapNavbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
           <Nav.Link
@@ -31,7 +45,8 @@ function Navbar() {
             to="home"
             smooth={true}
             duration={500}
-            onClick={handleNavClick} // Close on click
+            onClick={handleNavClick}
+            className="text-white"
           >
             Home
           </Nav.Link>
@@ -40,7 +55,8 @@ function Navbar() {
             to="about"
             smooth={true}
             duration={500}
-            onClick={handleNavClick} // Close on click
+            onClick={handleNavClick}
+            className="text-white"
           >
             About
           </Nav.Link>
@@ -49,7 +65,8 @@ function Navbar() {
             to="services"
             smooth={true}
             duration={500}
-            onClick={handleNavClick} // Close on click
+            onClick={handleNavClick}
+            className="text-white"
           >
             Services
           </Nav.Link>
@@ -58,7 +75,8 @@ function Navbar() {
             to="why-us"
             smooth={true}
             duration={500}
-            onClick={handleNavClick} // Close on click
+            onClick={handleNavClick}
+            className="text-white"
           >
             Why Us
           </Nav.Link>
@@ -67,7 +85,8 @@ function Navbar() {
             to="contact"
             smooth={true}
             duration={500}
-            onClick={handleNavClick} // Close on click
+            onClick={handleNavClick}
+            className="text-white"
           >
             Contact
           </Nav.Link>

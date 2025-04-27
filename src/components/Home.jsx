@@ -1,7 +1,6 @@
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-scroll";
-import HeroBg from "../assets/hero.jpg";
 import "./Home.css"; // Import the CSS
 
 function Home() {
@@ -10,13 +9,13 @@ function Home() {
       <Container fluid className="p-0">
         <Row className="text-center w-100 m-0">
           <Col>
-            <h1 className="display-4">
+            <h1 className="display-4 strait-regular fade-in">
               <strong>MK Engineering Services SA</strong>
             </h1>
-            <p className="lead">
+            <p className="lead strait-regular fade-in" style={{ animationDelay: "0.5s" }}>
               <strong>Engineering | Supply | Management</strong>
             </p>
-            <p className="mb-4">
+            <p className="mb-4 fade-in" style={{ animationDelay: "1s" }}>
               Empowering businesses with innovative engineering solutions.
             </p>
             <Button
@@ -25,7 +24,8 @@ function Home() {
               to="contact"
               smooth={true}
               duration={500}
-              className="home-button"
+              className="home-button fade-in"
+              style={{ animationDelay: "1.5s" }}
             >
               Get in Touch
             </Button>

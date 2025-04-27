@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import AboutImage from "../assets/about.jpg";
+import AboutImage from "../assets/logo-final.png"; // Updated image path
 import "./About.css"; // Import the updated CSS
 
 function About() {
