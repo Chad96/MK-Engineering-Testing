@@ -4,7 +4,7 @@ import ServicesBg from "../assets/serv.jpg";
 import ConsultingImg from "../assets/con-1.jpg";
 import SupplyImg from "../assets/supply.jpg";
 import ManagementImg from "../assets/manage.jpg";
-import CombinedImg from "../assets/black-1.jpg"; // Replace with your actual image
+import CombinedImg from "../assets/black-1.jpg"; 
 import "./Services.css";
 
 function Services() {
@@ -18,20 +18,16 @@ function Services() {
         "Technical advisory and feasibility studies",
         "System design and optimization",
         "Process improvement and troubleshooting",
-        
-        
-        
       ],
     },
     {
       title: "Product Supply",
       image: SupplyImg,
       items: [
-        "Pumps & Spares(self-priming pumps, high-pressure centrifugal pumps, etc..)",
+        "Pumps & Spares (self-priming pumps, high-pressure centrifugal pumps, etc..)",
         "Sourcing high-quality engineering components and materials",
         "Supply chain management and logistics solutions",
         "Vendor evaluation and procurement consulting",
-        
       ],
     },
     {
@@ -45,9 +41,37 @@ function Services() {
     },
   ];
 
-  // For the fade-in effect
   const combinedSectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    // Initial check
+    checkMobile();
+
+    // Update on window resize
+    window.addEventListener("resize", checkMobile);
+
+    // Cleanup on component unmount
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Define styles based on the screen size
+  const listStyle = {
+    listStyleType: 'disc',
+    paddingLeft: isMobile ? '10px' : '20px',  // Adjust padding based on screen size
+    marginTop: isMobile ? '5px' : '10px',     // Adjust margin based on screen size
+  };
+
+  const listItemStyle = {
+    paddingLeft: isMobile ? '4px' : '8px',    // Adjust padding based on screen size
+    textIndent: isMobile ? '-14px' : '-22px', // Adjust text indent for mobile
+    marginBottom: isMobile ? '2px' : '6px',   // Adjust margin bottom for mobile
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -55,7 +79,7 @@ function Services() {
         setIsVisible(entry.isIntersecting);
       },
       {
-        threshold: 0.3, // Start fading when 30% of section is visible
+        threshold: 0.3,
       }
     );
 
@@ -73,7 +97,6 @@ function Services() {
   return (
     <section id="services" className="py-5">
       <Container>
-        {/* Existing Services Section */}
         <h2 className="text-center">Our Services</h2>
         <p className="text-center">
           At MK Engineering Services SA, we offer a range of tailored engineering solutions, including:
@@ -85,9 +108,11 @@ function Services() {
                 <Card.Img variant="top" src={service.image} alt={service.title} />
                 <Card.Body>
                   <Card.Title>{service.title}</Card.Title>
-                  <ul>
+                  <ul style={listStyle}>
                     {service.items.map((item, i) => (
-                      <li key={i}>{item}</li>
+                      <li key={i} style={listItemStyle}>
+                        {item}
+                      </li>
                     ))}
                   </ul>
                 </Card.Body>
@@ -96,7 +121,6 @@ function Services() {
           ))}
         </Row>
 
-        {/* Combined Process Optimization and Our Team Section */}
         <Row
           className={`mt-5 combined-section ${isVisible ? "visible" : ""}`}
           ref={combinedSectionRef}

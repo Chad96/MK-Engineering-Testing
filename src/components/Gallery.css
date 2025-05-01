@@ -1,0 +1,79 @@
+/* Gallery Section - Based on WhyUs styles */
+.why-us-gallery {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .why-us-gallery h2 {
+    font-size: 2.5rem;
+    color: #800000;
+    font-weight: bold;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-top: 5%;
+  }
+  
+  /* Gallery Items */
+  .gallery-item {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Specific Images */
+  .gallery-1 {
+    background-image: url('/assets/pics/7.jpeg');
+  }
+  
+  .gallery-2 {
+    background-image: url('/assets/pics/4.jpeg');
+  }
+  
+  .gallery-3 {
+    background-image: url('/assets/pics/5.jpeg');
+  }
+  
+  .gallery-4 {
+    background-image: url('/assets/pics/8.jpeg');
+  }
+  
+  /* Responsive */
+  @media (max-width: 767px) {
+    .gallery-item {
+      height: 150px;
+      margin-bottom: 16px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .why-us-gallery h2 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+    }
+  
+    .gallery-item {
+      height: 140px;
+      margin-bottom: 16px;
+    }
+  }
+  
+  /* Gallery column spacing */
+  .why-us-gallery .row {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  
+  .why-us-gallery .col-6,
+  .why-us-gallery [class*="col-"] {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  

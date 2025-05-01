@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Nav, Navbar as BootstrapNavbar } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "./Navbar.css"; 
-import logo from "../assets/logo-final.png";
+import logo from "../assets/logo/MK logo.svg";
 
 function Navbar() {
   const [expanded, setExpanded] = useState(false);

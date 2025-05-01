@@ -63,12 +63,22 @@
 }
 
 #services .card ul {
-  list-style-type: none;
-  padding: 0;
+  padding-left: 20px; /* Add left padding for bullet indentation */
   font-size: 1rem;
   color: #555;
   line-height: 1.6;
+  margin-top: 15px;
 }
+
+#services .card li {
+  margin-bottom: 10px;
+  list-style: disc inside; /* Restore bullets properly */
+}
+
+#services .card li::before {
+  display: none; /* Remove custom dot, use default bullets */
+}
+
 
 #services .card li {
   margin-bottom: 10px;
@@ -183,9 +193,9 @@
     font-size: 1.3rem;
   }
 
-  #services .card ul {
+  /* #services .card ul {
     font-size: 0.95rem;
-  }
+  } */
 
   #services .card-body {
     padding: 15px;

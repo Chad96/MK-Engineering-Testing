@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import AboutImage from "../assets/about-1.jpg"; // Updated image path
+import AboutImage from "../assets/logo/MK logo.svg"; // Updated image path
 import "./About.css"; // Import the updated CSS
 
 function About() {
@@ -28,7 +28,7 @@ function About() {
               effective solutions.
             </p>
             <p>
-              As a startup, we are committed to delivering tailored engineering
+              We are committed to delivering tailored engineering
               services, product supply, and project management solutions that
               meet the unique needs of each client.
             </p>
