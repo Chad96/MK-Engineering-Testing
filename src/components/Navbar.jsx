@@ -25,13 +25,15 @@ function Navbar() {
         smooth={true}
         duration={500}
         onClick={handleNavClick}
-        className="d-flex align-items-center justify-content-center text-white"
+        className="d-flex align-items-center justify-content-center logo-wrapper"
       >
-        <img
-          src={logo}
-          alt="MK Engineering Logo"
-          style={{ width: "80px", height: "60px" }}
-        />
+        <div className="logo-background">
+          <img
+            src={logo}
+            alt="MK Engineering Logo"
+            style={{ width: "80px", height: "60px" }}
+          />
+        </div>
       </BootstrapNavbar.Brand>
 
       <BootstrapNavbar.Toggle

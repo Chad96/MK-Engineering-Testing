@@ -52,6 +52,20 @@
       margin-bottom: 16px;
     }
   }
+/* Optional: Add dimmed background and smooth transitions */
+.gallery-modal .modal-content {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.gallery-modal .modal-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
   
   @media (max-width: 576px) {
     .why-us-gallery h2 {
