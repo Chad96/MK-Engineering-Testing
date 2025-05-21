@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Modal } from 'react-bootstrap';
+import { Container, Row, Col, Modal, Carousel } from 'react-bootstrap';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './Gallery.css';
@@ -12,11 +12,17 @@ const images = [
 ];
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
+  const handleImageClick = (index) => {
+    setActiveIndex(index);
+    setShowModal(true);
+  };
 
   return (
     <section id="why-us" className="why-us-gallery">
@@ -34,28 +40,34 @@ const Gallery = () => {
             >
               <div
                 className={`gallery-item ${img.class}`}
-                onClick={() => setSelectedImage(img.src)}
+                onClick={() => handleImageClick(index)}
                 style={{ cursor: 'pointer' }}
               ></div>
             </Col>
           ))}
         </Row>
 
-        {/* Full View Modal */}
+        {/* Image Slider Modal */}
         <Modal
-          show={!!selectedImage}
-          onHide={() => setSelectedImage(null)}
+          show={showModal}
+          onHide={() => setShowModal(false)}
           centered
           size="lg"
           className="gallery-modal"
         >
           <Modal.Body className="p-0">
-            <img
-              src={selectedImage}
-              alt="Full View"
-              className="img-fluid w-100"
-              style={{ borderRadius: '10px' }}
-            />
+            <Carousel activeIndex={activeIndex} onSelect={setActiveIndex} interval={null}>
+              {images.map((img) => (
+                <Carousel.Item key={img.id}>
+                  <img
+                    className="d-block w-100"
+                    src={img.src}
+                    alt={`Slide ${img.id}`}
+                    style={{ borderRadius: '10px' }}
+                  />
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </Modal.Body>
         </Modal>
       </Container>
